@@ -4,6 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psycho Squad | ARK: Survival Ascended</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url('./ArkWeb/DinoCyber.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        color: #f4f4f4;
+        margin: 0;
+        text-align: center;
+    }
+    h1, h2 {
+        color: #ff6600;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-family: 'Impact', sans-serif;
+        font-size: 36px;
+        margin: 10px;
+    }
+    section {
+        padding: 20px;
+        margin: 20px auto;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        max-width: 900px;
+    }
+    .language-switcher button {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+    }
+    #server-info {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 300px;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #f4f4f4;
+        border: 2px solid #ff6600;
+        border-radius: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+    .discord-button img {
+        width: 150px;
+        transition: transform 0.2s ease;
+    }
+    .discord-button img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    img.banner {
+        max-height: 400px;
+        width: auto;
+    }
+
+    /* Styly pro pravý blok */
+    #server-info-right {
+        position: fixed; /* Fixuje blok při scrollování */
+        top: 20%; /* Vzdálenost od horní hrany stránky */
+        right: 20px; /* Vzdálenost od pravé hrany stránky */
+        width: 300px; /* Šířka bloku */
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí */
+        color: #f4f4f4;
+        border: 2px solid #ff6600;
+        border-radius: 10px;
+        text-align: left;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Jemný stín */
+    }
+</style>
 </head>
 <body>
     <!-- Informace o serveru -->
