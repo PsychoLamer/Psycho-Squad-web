@@ -37,10 +37,9 @@
             font-size: 16px;
             font-family: Arial, sans-serif;
         }
-        #server-info {
+        #server-info, #server-info-right {
             position: absolute;
             top: 20px;
-            left: 20px;
             width: 300px;
             padding: 15px;
             background: rgba(0, 0, 0, 0.8);
@@ -49,6 +48,12 @@
             border-radius: 10px;
             text-align: left;
             font-size: 14px;
+        }
+        #server-info {
+            left: 20px;
+        }
+        #server-info-right {
+            right: 20px;
         }
         .discord-button img {
             width: 150px;
@@ -75,6 +80,23 @@
         <p id="server-players"><strong>Hráči:</strong> 0/20</p>
     </div>
 
+    <!-- Nový text napravo -->
+    <div id="server-info-right">
+        <h3 id="right-title">Hledáš ideální místo?</h3>
+        <p id="right-text">
+            Hledáš ideální místo pro hraní survival her?<br><br>
+            Rád hraješ sám i s partou?<br>
+            Chceš mít svobodu hrát, kdy se ti to hodí, aniž bys přišel o své věci kvůli delší neaktivitě?<br><br>
+            PVE, žádné nucení do neustálé aktivity, a hlavně – žádné otravné oficiální servery?<br><br>
+            Přidej se k našemu ARK: Survival Ascended serveru!<br><br>
+            Máme:<br>
+            - Přátelskou komunitu, kde má každý slovo ohledně obsahu a pravidel.<br>
+            - Místo pro nováčky i zkušené hráče, kde ti rádi poradíme a pomůžeme.<br>
+            - Volnost hrát po svém – ať už jsi stavitel, průzkumník, nebo milovník dinosaurů.<br><br>
+            Neváhej a přidej se k nám!
+        </p>
+    </div>
+
     <!-- Banner -->
     <div style="text-align: center;">
         <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner" class="banner">
@@ -94,99 +116,44 @@
         </p>
     </section>
 
-    <!-- Discord Tlačítko -->
-    <div class="discord-button">
-        <a href="https://discord.gg/fWxcFaK7Sc" target="_blank">
-            <img src="./ArkWeb/Discord_Button_Ark_Survival.jpeg" alt="Připoj se na náš Discord">
-        </a>
-    </div>
-
-    <!-- Informace o hře -->
-    <section id="ark-info">
-        <h2 id="ark-title">ARK: Survival Ascended</h2>
-        <p id="ark-text">
-            ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5.<br>
-            Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití.<br>
-            Hraj s námi na našem serveru! Stačí se připojit na náš Discord a začít hrát s námi.
-        </p>
-    </section>
-
-    <!-- Pravidla serveru -->
-    <section id="rules">
-        <h2 id="rules-title">Pravidla Psycho Squad serveru</h2>
-        <p id="rules-text">
-            <strong>Hraj s respektem:</strong> Buď přátelský a ohleduplný k ostatním hráčům.<br>
-            <strong>Stavíme s rozumem:</strong> Základny stavíme v dostatečné vzdálenosti.<br>
-            <strong>Společné projekty:</strong> Plánujeme je na Discordu.<br>
-            <strong>Hra není závod:</strong> Důležité je si užít hru.<br>
-            <strong>Bez výhod:</strong> Žádné protekce ani výhody.<br>
-            <strong>Hraj férově:</strong> Nekraď a nedělej naschvály ostatním hráčům.
-        </p>
-    </section>
-
     <!-- JavaScript pro přepínání jazyků -->
     <script>
     const translations = {
         cs: {
             serverTitle: "Informace o serveru",
-            serverName: "<strong>Název serveru:</strong> Psycho Squad PVE",
-            serverPlatforms: "<strong>Platformy:</strong> PC, Xbox, PS5",
-            serverIP: "<strong>IP adresa:</strong> 37.10.115.237:5620",
-            serverType: "<strong>Typ:</strong> Vanilla CZ/SK/ENG",
-            serverPlayers: "<strong>Hráči:</strong> 0/20",
-            welcomeTitle: "Vítej na stránkách Psycho Squad!",
-            welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her.",
-            arkTitle: "ARK: Survival Ascended",
-            arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015...",
-            rulesTitle: "Pravidla Psycho Squad serveru",
-            rulesText: `
-                <strong>Hraj s respektem:</strong> Buď přátelský a ohleduplný k ostatním hráčům.<br>
-                <strong>Stavíme s rozumem:</strong> Základny stavíme v dostatečné vzdálenosti.<br>
-                <strong>Společné projekty:</strong> Plánujeme je na Discordu.<br>
-                <strong>Hra není závod:</strong> Důležité je si užít hru.<br>
-                <strong>Bez výhod:</strong> Žádné protekce ani výhody.<br>
-                <strong>Hraj férově:</strong> Nekraď z neuzamčených skladů a nedělej naschvály.
-            `
+            rightTitle: "Hledáš ideální místo?",
+            rightText: `Hledáš ideální místo pro hraní survival her?<br><br>
+                        Rád hraješ sám i s partou?<br>
+                        Chceš mít svobodu hrát, kdy se ti to hodí, aniž bys přišel o své věci kvůli delší neaktivitě?<br><br>
+                        PVE, žádné nucení do neustálé aktivity, a hlavně – žádné otravné oficiální servery?<br><br>
+                        Přidej se k našemu ARK: Survival Ascended serveru!<br><br>
+                        Máme:<br>
+                        - Přátelskou komunitu, kde má každý slovo ohledně obsahu a pravidel.<br>
+                        - Místo pro nováčky i zkušené hráče, kde ti rádi poradíme a pomůžeme.<br>
+                        - Volnost hrát po svém – ať už jsi stavitel, průzkumník, nebo milovník dinosaurů.<br><br>
+                        Neváhej a přidej se k nám!`,
         },
         en: {
             serverTitle: "Server Information",
-            serverName: "<strong>Server Name:</strong> Psycho Squad PVE",
-            serverPlatforms: "<strong>Platforms:</strong> PC, Xbox, PS5",
-            serverIP: "<strong>IP Address:</strong> 37.10.115.237:5620",
-            serverType: "<strong>Type:</strong> Vanilla CZ/SK/ENG",
-            serverPlayers: "<strong>Players:</strong> 0/20",
-            welcomeTitle: "Welcome to Psycho Squad!",
-            welcomeText: "We are a group of players who love Ark: Survival Ascended and many other games.",
-            arkTitle: "ARK: Survival Ascended",
-            arkText: "ARK: Survival Ascended is a remastered version of ARK: Survival Evolved...",
-            rulesTitle: "Psycho Squad Server Rules",
-            rulesText: `
-                <strong>Play with respect:</strong> Be friendly and considerate to other players.<br>
-                <strong>Build wisely:</strong> Bases should be built far enough apart.<br>
-                <strong>Community projects:</strong> Planned on Discord.<br>
-                <strong>The game isn't a race:</strong> Enjoy the game and help build a friendly community.<br>
-                <strong>No privileges:</strong> No special treatment.<br>
-                <strong>Play fairly:</strong> Don't steal from unlocked boxes or sabotage others.
-            `
+            rightTitle: "Looking for the perfect place?",
+            rightText: `Looking for the perfect place to play survival games?<br><br>
+                        Do you enjoy playing solo or with friends?<br>
+                        Want the freedom to play when it suits you without losing your progress due to inactivity?<br><br>
+                        PVE, no pressure to always be active, and best of all – no annoying official servers?<br><br>
+                        Join our ARK: Survival Ascended server!<br><br>
+                        We offer:<br>
+                        - A friendly community where everyone has a say in content and rules.<br>
+                        - A place for beginners and experienced players where we’ll gladly guide and help you.<br>
+                        - The freedom to play your way – whether you're a builder, explorer, or dino lover.<br><br>
+                        Don’t wait – join us now!`,
         }
     };
 
     function setLanguage(lang) {
         document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
-        document.getElementById("server-name").innerHTML = translations[lang].serverName;
-        document.getElementById("server-platforms").innerHTML = translations[lang].serverPlatforms;
-        document.getElementById("server-ip").innerHTML = translations[lang].serverIP;
-        document.getElementById("server-type").innerHTML = translations[lang].serverType;
-        document.getElementById("server-players").innerHTML = translations[lang].serverPlayers;
-
-        document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
-        document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
-        document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
-        document.getElementById("ark-text").innerHTML = translations[lang].arkText;
-        document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
-        document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
+        document.getElementById("right-title").innerHTML = translations[lang].rightTitle;
+        document.getElementById("right-text").innerHTML = translations[lang].rightText;
     }
-</script>
-   
+    </script>
 </body>
 </html>
