@@ -24,57 +24,89 @@
             border-radius: 10px;
             max-width: 900px;
         }
-        img {
+        img.banner {
             width: 100%;
+            height: auto;
             max-height: 400px;
-            object-fit: cover;
-            margin-bottom: 10px;
+            object-fit: contain;
         }
         a.button img {
             width: 200px;
             margin-top: 10px;
         }
-        #server-status {
-            background: rgba(20, 20, 20, 0.8);
-            padding: 10px;
-            border: 1px solid #444;
+        .language-switcher {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .language-switcher button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
             border-radius: 5px;
-            margin-top: 20px;
+            background-color: #444;
+            color: white;
+        }
+        .language-switcher button:hover {
+            background-color: #666;
         }
     </style>
 </head>
 <body>
     <!-- Banner -->
-    <img src="ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner">
+    <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner" class="banner">
+
+    <!-- Přepínač jazyků -->
+    <div class="language-switcher">
+        <button onclick="setLanguage('cs')">Česky</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 
     <!-- Úvod -->
     <section id="intro">
-        <h1>Vítej na stránkách Psycho Squad!</h1>
-        <p>
+        <h1 id="welcome-title">Vítej na stránkách Psycho Squad!</h1>
+        <p id="welcome-text">
             Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her. Baví nás stavět, bojovat a hlavně hrát společně. Přidej se k nám a staň se součástí naší komunity!
         </p>
         <a href="https://discord.gg/fWxcFaK7Sc" class="button">
-            <img src="ArkWeb/Discord_Button_Ark_Survival.jpeg" alt="Discord Button">
+            <img src="./ArkWeb/Discord_Button_Ark_Survival.jpeg" alt="Discord Button">
         </a>
     </section>
 
     <!-- Informace o hře -->
     <section id="ark-info">
-        <h2>ARK: Survival Ascended</h2>
-        <p>
+        <h2 id="ark-title">ARK: Survival Ascended</h2>
+        <p id="ark-text">
             ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5.<br>
             Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití.<br>
             Pravidelné aktualizace přinášejí nový obsah a rozšiřují herní možnosti.
         </p>
     </section>
 
-    <!-- Pravidla serveru -->
-    <section id="rules">
-        <h2>Pravidla Psycho Squad serveru</h2>
-        <p>
-            Hraj s respektem a férově. Základny stavíme v dostatečné vzdálenosti a společné projekty plánujeme na Discordu.<br>
-            Hra není závod – jde o zábavu a komunitu. Žádné výhody a protekce – pravidla platí pro všechny stejně!
-        </p>
-    </section>
+    <script>
+        // Přepínání jazyků
+        const translations = {
+            cs: {
+                welcomeTitle: "Vítej na stránkách Psycho Squad!",
+                welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her. Baví nás stavět, bojovat a hlavně hrát společně. Přidej se k nám a staň se součástí naší komunity!",
+                arkTitle: "ARK: Survival Ascended",
+                arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5. Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití. Pravidelné aktualizace přinášejí nový obsah a rozšiřují herní možnosti."
+            },
+            en: {
+                welcomeTitle: "Welcome to Psycho Squad!",
+                welcomeText: "We are a group of players who love not only Ark: Survival Ascended but many other games. We enjoy building, fighting, and most importantly playing together. Join us and become part of our community!",
+                arkTitle: "ARK: Survival Ascended",
+                arkText: "ARK: Survival Ascended is a remastered version of the original ARK: Survival Evolved from 2015, now built on the modern Unreal Engine 5. Players find themselves on a mysterious island full of dinosaurs and prehistoric creatures that they can tame and use to survive. Regular updates bring new content and expand gameplay possibilities."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById("welcome-title").innerText = translations[lang].welcomeTitle;
+            document.getElementById("welcome-text").innerText = translations[lang].welcomeText;
+            document.getElementById("ark-title").innerText = translations[lang].arkTitle;
+            document.getElementById("ark-text").innerText = translations[lang].arkText;
+        }
+    </script>
 </body>
 </html>
