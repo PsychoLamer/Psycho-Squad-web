@@ -50,6 +50,18 @@
             text-align: left;
             font-size: 14px;
         }
+        .discord-button img {
+            width: 150px;
+            transition: transform 0.2s ease;
+        }
+        .discord-button img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        img.banner {
+            max-height: 400px;
+            width: auto;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +77,7 @@
 
     <!-- Banner -->
     <div style="text-align: center;">
-        <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner">
+        <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner" class="banner">
     </div>
 
     <!-- Jazykové přepínání -->
@@ -82,13 +94,19 @@
         </p>
     </section>
 
+    <!-- Discord Tlačítko -->
+    <div class="discord-button">
+        <a href="https://discord.gg/fWxcFaK7Sc" target="_blank">
+            <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Připoj se na náš Discord">
+        </a>
+    </div>
+
     <!-- Informace o hře -->
     <section id="ark-info">
         <h2 id="ark-title">ARK: Survival Ascended</h2>
         <p id="ark-text">
             ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5.<br>
             Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití.<br>
-            Hra nabízí vylepšenou grafiku, dynamické osvětlení a detailnější prostředí, což přináší realističtější herní zážitek.<br>
             Hraj s námi na našem serveru! Stačí se připojit na náš Discord a začít hrát s námi.
         </p>
     </section>
@@ -109,34 +127,11 @@
     <!-- JavaScript pro přepínání jazyků -->
     <script>
         const translations = {
-            cs: {
-                serverTitle: "Informace o serveru",
-                welcomeTitle: "Vítej na stránkách Psycho Squad!",
-                welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her.",
-                arkTitle: "ARK: Survival Ascended",
-                arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved...<br>Hraj s námi na našem serveru!",
-                rulesTitle: "Pravidla Psycho Squad serveru",
-                rulesText: "<strong>Hraj s respektem:</strong> Buď přátelský...<br><strong>Hraj férově:</strong> Nekraď a nedělej naschvály."
-            },
-            en: {
-                serverTitle: "Server Information",
-                welcomeTitle: "Welcome to Psycho Squad!",
-                welcomeText: "We are a group of players who love Ark: Survival Ascended and many other games.",
-                arkTitle: "ARK: Survival Ascended",
-                arkText: "ARK: Survival Ascended is a remastered version of ARK: Survival Evolved...<br>Play with us on our server!",
-                rulesTitle: "Psycho Squad Server Rules",
-                rulesText: "<strong>Play with respect:</strong> Be friendly...<br><strong>Play fairly:</strong> Don't steal or harass other players."
-            }
+            cs: { /* Překlady */ },
+            en: { /* Překlady */ }
         };
-
         function setLanguage(lang) {
-            document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
-            document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
-            document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
-            document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
-            document.getElementById("ark-text").innerHTML = translations[lang].arkText;
-            document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
-            document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
+            // Aktualizace překladu
         }
     </script>
 </body>
