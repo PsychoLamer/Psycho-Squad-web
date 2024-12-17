@@ -14,8 +14,11 @@
             text-align: center;
         }
         h1, h2 {
-            color: #ff6600; /* Atraktivní oranžová barva */
+            color: #ffa500; /* Jemnější oranžová barva */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Přidán silnější stín pro lepší čitelnost */
             font-family: 'Impact', sans-serif;
+            font-size: 36px; /* Zvětšení velikosti písma */
+            margin-top: 10px;
         }
         section {
             padding: 20px;
@@ -24,12 +27,6 @@
             border-radius: 10px;
             max-width: 900px;
         }
-        img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain; /* Banner zůstane celý viditelný */
-            margin-bottom: 10px;
-        }
         a.button img {
             width: 200px;
             margin-top: 10px;
@@ -37,11 +34,7 @@
         }
         a.button img:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 15px #ff6600;
-        }
-        a.button img:active {
-            transform: scale(0.95);
-            box-shadow: 0 0 10px #ff6600;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
         }
         #server-info {
             position: absolute;
