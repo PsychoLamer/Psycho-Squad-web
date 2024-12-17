@@ -12,10 +12,32 @@
             color: #f4f4f4;
             margin: 0;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1, h2 {
-            color: red;
+            color: #ff6600; /* Atraktivní oranžová barva */
             font-family: 'Impact', sans-serif;
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #server-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #server-info h2 {
+            text-align: center;
         }
         section {
             padding: 20px;
@@ -24,40 +46,57 @@
             border-radius: 10px;
             max-width: 900px;
         }
-        img.banner {
+        img {
             width: 100%;
-            height: auto;
             max-height: 400px;
             object-fit: contain;
+            margin-bottom: 10px;
         }
         a.button img {
             width: 200px;
             margin-top: 10px;
         }
+        #server-status {
+            background: rgba(20, 20, 20, 0.8);
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
         .language-switcher {
-            margin: 10px 0;
-            font-size: 18px;
+            margin: 20px auto;
         }
         .language-switcher button {
-            margin: 0 5px;
-            padding: 5px 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #444;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #ff6600;
             color: white;
-        }
-        .language-switcher button:hover {
-            background-color: #666;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Impact', sans-serif;
         }
     </style>
 </head>
 <body>
-    <!-- Banner -->
-    <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner" class="banner">
+    <!-- Banner + Server Info Wrapper -->
+    <div class="content-wrapper">
+        <!-- Server Info -->
+        <div id="server-info">
+            <h2>Informace o serveru</h2>
+            <p><strong>Název:</strong> Psycho Squad PVE Boosted</p>
+            <p><strong>Mapa:</strong> The Island</p>
+            <p><strong>Verze:</strong> 96.18</p>
+            <p><strong>Kapacita:</strong> 20 hráčů</p>
+            <p><strong>IP adresa:</strong> 37.10.115.237:5620</p>
+            <p><strong>Pravidla:</strong> Viz níže</p>
+        </div>
 
-    <!-- Přepínač jazyků -->
+        <!-- Banner -->
+        <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Psycho Squad Banner">
+    </div>
+
+    <!-- Jazykové přepínání -->
     <div class="language-switcher">
         <button onclick="setLanguage('cs')">Česky</button>
         <button onclick="setLanguage('en')">English</button>
@@ -76,7 +115,7 @@
 
     <!-- Informace o hře -->
     <section id="ark-info">
-        <h2 id="ark-title">ARK: Survival Ascended</h2>
+        <h2>ARK: Survival Ascended</h2>
         <p id="ark-text">
             ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5.<br>
             Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití.<br>
@@ -84,28 +123,52 @@
         </p>
     </section>
 
+    <!-- Pravidla serveru -->
+    <section id="rules">
+        <h2>Pravidla Psycho Squad serveru</h2>
+        <p>
+            <strong>Hraj s respektem</strong><br>
+            Buď přátelský a ohleduplný k ostatním hráčům. Hrajeme společně pro radost, ne proti sobě.<br><br>
+
+            <strong>Stavíme s rozumem</strong><br>
+            Základny stavíme v dostatečné vzdálenosti od sebe, ideálně tak, aby nebyly na dohled.<br><br>
+
+            <strong>Společné projekty</strong><br>
+            Velké stavby se plánují na Discordu. Co a jak se má stavět, rozhodne většina.<br><br>
+
+            <strong>Hra není závod</strong><br>
+            Nejde o to, kdo jako první získá endgame gear nebo největší základnu. Důležité je si užít hru a budovat komunitu.<br><br>
+
+            <strong>Módy a úpravy serveru</strong><br>
+            Chceš změnit nastavení nebo přidat modifikaci? Probereme to a odhlasujeme – každý názor má svou váhu.<br><br>
+
+            <strong>Bez výhod a nároků</strong><br>
+            Nikdo nemá „nárok na nic“. Server provozujeme pro radost, žádné protekce nebo výhody tu nečekej.<br><br>
+
+            <strong>Hraj férově</strong><br>
+            Nekraď z neuzamčených skladovacích boxů. Nedělej naschvály ostatním hráčům.
+        </p>
+    </section>
+
+    <!-- JavaScript pro přepínání jazyků -->
     <script>
-        // Přepínání jazyků
         const translations = {
             cs: {
                 welcomeTitle: "Vítej na stránkách Psycho Squad!",
-                welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her. Baví nás stavět, bojovat a hlavně hrát společně. Přidej se k nám a staň se součástí naší komunity!",
-                arkTitle: "ARK: Survival Ascended",
-                arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5. Hráči se ocitají na záhadném ostrově plném dinosaurů a prehistorických tvorů, které mohou ochočit a využít k přežití. Pravidelné aktualizace přinášejí nový obsah a rozšiřují herní možnosti."
+                welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her...",
+                arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5..."
             },
             en: {
                 welcomeTitle: "Welcome to Psycho Squad!",
-                welcomeText: "We are a group of players who love not only Ark: Survival Ascended but many other games. We enjoy building, fighting, and most importantly playing together. Join us and become part of our community!",
-                arkTitle: "ARK: Survival Ascended",
-                arkText: "ARK: Survival Ascended is a remastered version of the original ARK: Survival Evolved from 2015, now built on the modern Unreal Engine 5. Players find themselves on a mysterious island full of dinosaurs and prehistoric creatures that they can tame and use to survive. Regular updates bring new content and expand gameplay possibilities."
+                welcomeText: "We are a group of players who love not only Ark: Survival Ascended but many other games...",
+                arkText: "ARK: Survival Ascended is a remastered version of the original ARK: Survival Evolved from 2015, now built on the modern Unreal Engine 5..."
             }
         };
 
         function setLanguage(lang) {
-            document.getElementById("welcome-title").innerText = translations[lang].welcomeTitle;
-            document.getElementById("welcome-text").innerText = translations[lang].welcomeText;
-            document.getElementById("ark-title").innerText = translations[lang].arkTitle;
-            document.getElementById("ark-text").innerText = translations[lang].arkText;
+            document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
+            document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
+            document.getElementById("ark-text").innerHTML = translations[lang].arkText;
         }
     </script>
 </body>
