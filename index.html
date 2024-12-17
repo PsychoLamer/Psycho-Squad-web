@@ -97,7 +97,7 @@
     <!-- Discord Tlačítko -->
     <div class="discord-button">
         <a href="https://discord.gg/fWxcFaK7Sc" target="_blank">
-            <img src="./ArkWeb/Psycho_Squad_Banner.jpeg" alt="Připoj se na náš Discord">
+            <img src="./ArkWeb/Discord_Button_Ark_Survival.jpeg" alt="Připoj se na náš Discord">
         </a>
     </div>
 
@@ -127,11 +127,34 @@
     <!-- JavaScript pro přepínání jazyků -->
     <script>
         const translations = {
-            cs: { /* Překlady */ },
-            en: { /* Překlady */ }
+            cs: {
+                serverTitle: "Informace o serveru",
+                welcomeTitle: "Vítej na stránkách Psycho Squad!",
+                welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her.",
+                arkTitle: "ARK: Survival Ascended",
+                arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5...",
+                rulesTitle: "Pravidla Psycho Squad serveru",
+                rulesText: "<strong>Hraj s respektem:</strong> Buď přátelský...<br><strong>Hraj férově:</strong> Nekraď a nedělej naschvály."
+            },
+            en: {
+                serverTitle: "Server Information",
+                welcomeTitle: "Welcome to Psycho Squad!",
+                welcomeText: "We are a group of players who love Ark: Survival Ascended and many other games.",
+                arkTitle: "ARK: Survival Ascended",
+                arkText: "ARK: Survival Ascended is a remastered version of ARK: Survival Evolved...",
+                rulesTitle: "Psycho Squad Server Rules",
+                rulesText: "<strong>Play with respect:</strong> Be friendly...<br><strong>Play fairly:</strong> Don't steal or harass other players."
+            }
         };
+
         function setLanguage(lang) {
-            // Aktualizace překladu
+            document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
+            document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
+            document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
+            document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
+            document.getElementById("ark-text").innerHTML = translations[lang].arkText;
+            document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
+            document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
         }
     </script>
 </body>
