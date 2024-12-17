@@ -126,82 +126,67 @@
 
     <!-- JavaScript pro přepínání jazyků -->
     <script>
-       const translations = {
-    cs: {
-        serverTitle: "Informace o serveru",
-        serverName: "<strong>Název serveru:</strong> Psycho Squad PVE",
-        serverPlatforms: "<strong>Platformy:</strong> PC, Xbox, PS5",
-        serverIP: "<strong>IP adresa:</strong> 37.10.115.237:5620",
-        serverType: "<strong>Typ:</strong> Vanilla CZ/SK/ENG",
-        serverPlayers: "<strong>Hráči:</strong> 0/20",
-        welcomeTitle: "Vítej na stránkách Psycho Squad!",
-        welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her.",
-        arkTitle: "ARK: Survival Ascended",
-        arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015, nyní postavená na moderním enginu Unreal Engine 5...",
-        rulesTitle: "Pravidla Psycho Squad serveru",
-        rulesText: `
-            <strong>Hraj s respektem:</strong> Buď přátelský a ohleduplný k ostatním hráčům.<br>
-            <strong>Stavíme s rozumem:</strong> Základny stavíme v dostatečné vzdálenosti od sebe, ideálně tak, aby nebyly na dohled.<br>
-            <strong>Společné projekty:</strong> Plánujeme je na Discordu. Velké stavby se schvalují komunitou.<br>
-            <strong>Hra není závod:</strong> Důležité je si užít hru a budovat komunitu.<br>
-            <strong>Bez výhod a nároků:</strong> Žádné protekce ani výhody pro jednotlivce.<br>
-            <strong>Hraj férově:</strong> Nekraď z neuzamčených skladů a nedělej naschvály ostatním hráčům.
-        `
-    },
-    en: {
-        serverTitle: "Server Information",
-        serverName: "<strong>Server Name:</strong> Psycho Squad PVE",
-        serverPlatforms: "<strong>Platforms:</strong> PC, Xbox, PS5",
-        serverIP: "<strong>IP Address:</strong> 37.10.115.237:5620",
-        serverType: "<strong>Type:</strong> Vanilla CZ/SK/ENG",
-        serverPlayers: "<strong>Players:</strong> 0/20",
-        welcomeTitle: "Welcome to Psycho Squad!",
-        welcomeText: "We are a group of players who love Ark: Survival Ascended and many other games.",
-        arkTitle: "ARK: Survival Ascended",
-        arkText: "ARK: Survival Ascended is a remastered version of ARK: Survival Evolved...",
-        rulesTitle: "Psycho Squad Server Rules",
-        rulesText: `
-            <strong>Play with respect:</strong> Be friendly and considerate to other players.<br>
-            <strong>Build wisely:</strong> Bases should be built far enough apart, ideally out of sight.<br>
-            <strong>Community projects:</strong> Planned on Discord. Large builds must be approved by the community.<br>
-            <strong>The game isn't a race:</strong> Enjoy the game and help build a friendly community.<br>
-            <strong>No privileges:</strong> No special treatment or advantages for individuals.<br>
-            <strong>Play fairly:</strong> Don't steal from unlocked storage boxes or sabotage others.
-        `
-    }
-};
-
-function setLanguage(lang) {
-    document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
-    document.getElementById("server-name").innerHTML = translations[lang].serverName;
-    document.getElementById("server-platforms").innerHTML = translations[lang].serverPlatforms;
-    document.getElementById("server-ip").innerHTML = translations[lang].serverIP;
-    document.getElementById("server-type").innerHTML = translations[lang].serverType;
-    document.getElementById("server-players").innerHTML = translations[lang].serverPlayers;
-
-    document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
-    document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
-    document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
-    document.getElementById("ark-text").innerHTML = translations[lang].arkText;
-    document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
-    document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
-}
-
-    }
-};
-
-            }
-        };
-
-        function setLanguage(lang) {
-            document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
-            document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
-            document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
-            document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
-            document.getElementById("ark-text").innerHTML = translations[lang].arkText;
-            document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
-            document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
+    const translations = {
+        cs: {
+            serverTitle: "Informace o serveru",
+            serverName: "<strong>Název serveru:</strong> Psycho Squad PVE",
+            serverPlatforms: "<strong>Platformy:</strong> PC, Xbox, PS5",
+            serverIP: "<strong>IP adresa:</strong> 37.10.115.237:5620",
+            serverType: "<strong>Typ:</strong> Vanilla CZ/SK/ENG",
+            serverPlayers: "<strong>Hráči:</strong> 0/20",
+            welcomeTitle: "Vítej na stránkách Psycho Squad!",
+            welcomeText: "Jsme skupina hráčů, co miluje nejen Ark: Survival Ascended, ale i spoustu dalších her.",
+            arkTitle: "ARK: Survival Ascended",
+            arkText: "ARK: Survival Ascended je remasterovaná verze původní hry ARK: Survival Evolved z roku 2015...",
+            rulesTitle: "Pravidla Psycho Squad serveru",
+            rulesText: `
+                <strong>Hraj s respektem:</strong> Buď přátelský a ohleduplný k ostatním hráčům.<br>
+                <strong>Stavíme s rozumem:</strong> Základny stavíme v dostatečné vzdálenosti.<br>
+                <strong>Společné projekty:</strong> Plánujeme je na Discordu.<br>
+                <strong>Hra není závod:</strong> Důležité je si užít hru.<br>
+                <strong>Bez výhod:</strong> Žádné protekce ani výhody.<br>
+                <strong>Hraj férově:</strong> Nekraď z neuzamčených skladů a nedělej naschvály.
+            `
+        },
+        en: {
+            serverTitle: "Server Information",
+            serverName: "<strong>Server Name:</strong> Psycho Squad PVE",
+            serverPlatforms: "<strong>Platforms:</strong> PC, Xbox, PS5",
+            serverIP: "<strong>IP Address:</strong> 37.10.115.237:5620",
+            serverType: "<strong>Type:</strong> Vanilla CZ/SK/ENG",
+            serverPlayers: "<strong>Players:</strong> 0/20",
+            welcomeTitle: "Welcome to Psycho Squad!",
+            welcomeText: "We are a group of players who love Ark: Survival Ascended and many other games.",
+            arkTitle: "ARK: Survival Ascended",
+            arkText: "ARK: Survival Ascended is a remastered version of ARK: Survival Evolved...",
+            rulesTitle: "Psycho Squad Server Rules",
+            rulesText: `
+                <strong>Play with respect:</strong> Be friendly and considerate to other players.<br>
+                <strong>Build wisely:</strong> Bases should be built far enough apart.<br>
+                <strong>Community projects:</strong> Planned on Discord.<br>
+                <strong>The game isn't a race:</strong> Enjoy the game and help build a friendly community.<br>
+                <strong>No privileges:</strong> No special treatment.<br>
+                <strong>Play fairly:</strong> Don't steal from unlocked boxes or sabotage others.
+            `
         }
-    </script>
+    };
+
+    function setLanguage(lang) {
+        document.getElementById("server-title").innerHTML = translations[lang].serverTitle;
+        document.getElementById("server-name").innerHTML = translations[lang].serverName;
+        document.getElementById("server-platforms").innerHTML = translations[lang].serverPlatforms;
+        document.getElementById("server-ip").innerHTML = translations[lang].serverIP;
+        document.getElementById("server-type").innerHTML = translations[lang].serverType;
+        document.getElementById("server-players").innerHTML = translations[lang].serverPlayers;
+
+        document.getElementById("welcome-title").innerHTML = translations[lang].welcomeTitle;
+        document.getElementById("welcome-text").innerHTML = translations[lang].welcomeText;
+        document.getElementById("ark-title").innerHTML = translations[lang].arkTitle;
+        document.getElementById("ark-text").innerHTML = translations[lang].arkText;
+        document.getElementById("rules-title").innerHTML = translations[lang].rulesTitle;
+        document.getElementById("rules-text").innerHTML = translations[lang].rulesText;
+    }
+</script>
+   
 </body>
 </html>
